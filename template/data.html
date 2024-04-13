@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="{% static 'css/admin.css' %}" /> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href=" {% static '/css/admin.css' %} "
+    />
+    <title>Taxi-Admin</title>
+  </head>
+  <body class="data-body">
+    <div class="admin-top">
+      <a href="/reset">
+        <button class="reset-bt">Reset</button>
+      </a>
+    </div>
+    <section class="taxi-details">
+      <table>
+        <thead>
+          <tr>
+            <th>Taxi No</th>
+            <th>Customer ID</th>
+            <th>Pickup Location</th>
+            <th>Drop Location</th>
+            <th>Pickup Time</th>
+            <th>Drop Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for taxi in taxies%}
+          <tr>
+            <td>{{taxi.taxino}}</td>
+            <td>{{taxi.cus_id}}</td>
+            <td>{{taxi.pick_loc}}</td>
+            <td>{{taxi.drop_loc}}</td>
+            <td>{{taxi.pick_time}}</td>
+            <td>{{taxi.drop_time}}</td>
+          </tr>
+          {% endfor%}
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>

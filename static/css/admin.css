@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.admin-body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  background: url(./bg-img.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  align-items: center;
+}
+.data-body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+}
+.admin-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(172, 230, 255);
+  width: 45vw;
+  height: 70px;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+button {
+  height: 40px;
+  border-radius: 5px;
+  color: black;
+  font-weight: 600;
+  background-color: rgb(159, 230, 159);
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  width: 100px;
+}
+label {
+  font-weight: 600;
+}
+input {
+  height: 40px;
+  padding-left: 10px;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+}
+button:hover {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+body .admin-top {
+  padding: 30px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+body .admin-top button {
+  position: relative;
+  float: right;
+  background-color: rgb(237, 118, 118);
+}
+section {
+  margin-top: 100px;
+  width: 98%;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  height: 83vh;
+  overflow-y: scroll;
+
+}
+section::-webkit-scrollbar{
+    display: none;
+}
+table {
+  border-radius: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  height: calc(100vh-100px);
+}
+th,
+tr,
+td {
+  padding: 10px;
+  border: 1px solid whitesmoke;
+}
+tbody tr:hover {
+  background-color: rgb(228, 216, 216);
+  color: black;
+  border: 1px solid rgb(159, 239, 47);
+}

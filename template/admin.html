@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{% static 'css/admin.css' %}" /> -->
+    <link rel="stylesheet" type="text/css" href=" {% static '/css/admin.css' %} ">
+    <title>Taxi-Admin</title>
+</head>
+<body class="admin-body">
+    <form method="POST" class="admin-container">
+        {%csrf_token%}
+        <label for="taxi-count">Enter No. of Taxies</label>
+        <input type="text" name="taxi-count">
+        <button type="submit">Allocate Taxis</button>
+    </from>
+</body>
+</html>

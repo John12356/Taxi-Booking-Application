@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href=" {% static '/css/style.css' %} ">
+    <title>Taxi Booking</title>
+  </head>
+  <body>
+    <div class="whole-container">
+      <div class="app-top">
+        <a href="/taxi-admin"><button class="admin-bt">Admin</button></a>
+      </div>
+      <h1 class="header">Welcome to Securden Taxi</h1>
+      <form method="post" class="user-container">
+        {%csrf_token%}
+        <h3 class="header">Enter your Details</h3>
+        <label for="cus_id">Enter your ID</label>
+        <input required name="cus_id" type="text" />
+        <label for="pick-loc">Select your PickUp Location</label>
+        <select required name="pick_loc" id="loc-sel">
+          <option value="">-- Select --</option>
+          <option value="A">Securden</option>
+          <option value="B">Kathipara</option>
+          <option value="C">Guindy</option>
+          <option value="D">Muduvankarai</option>
+          <option value="E">Concorde</option>
+          <option value="F">Saidapet</option>
+        </select>
+
+        <label for="drop-loc">Select your Drop Location</label>
+        <select required name="drop_loc" id="loc-sel">
+          <option value="">-- Select --</option>
+          <option value="A">Securden</option>
+          <option value="B">Kathipara</option>
+          <option value="C">Guindy</option>
+          <option value="D">Muduvankarai</option>
+          <option value="E">Concorde</option>
+          <option value="F">Saidapet</option>
+        </select>
+
+        <label for="pick-time">Enter your time (24 Hr)</label>
+        <input required type="text" name="pick_time" />
+        <button type="submit">Book Taxi</button>
+      </form>
+    </div>
+  </body>
+</html>
